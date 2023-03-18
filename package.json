@@ -9,15 +9,18 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.1.7",
-    "@strapi/plugin-users-permissions": "4.1.7",
+    "@sendgrid/mail": "^7.7.0",
     "@strapi/plugin-i18n": "4.1.7",
+    "@strapi/plugin-users-permissions": "4.1.7",
+    "@strapi/provider-email-sendgrid": "^4.8.2",
     "@strapi/provider-upload-cloudinary": "4.1.7",
+    "@strapi/strapi": "4.1.7",
+    "@strapi/utils": "^4.8.2",
     "pg": "^8.7.0",
     "pg-connection-string": "^2.5.0",
-    "sqlite3": "latest"
+    "sqlite3": "latest",
+    "strapi-plugin-passwordless": "^4.0.8"
   },
   "author": {
     "name": "A Strapi developer"
