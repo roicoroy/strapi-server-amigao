@@ -9,19 +9,19 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // email: {
-  //   config: {
-  //     provider: "sendgrid",
-  //     providerOptions: {
-  //       apiKey: env("SENDGRID_API_KEY"),
-  //     },
-  //     settings: {
-  //       defaultFrom: "roicoroy@mercadoamigao.com",
-  //       defaultReplyTo: "roicoroy@mercadoamigao.com",
-  //       testAddress: "roicoroy@mercadoamigao.com",
-  //     },
-  //   },
-  // },
+  email: {
+    config: {
+      provider: "sendgrid",
+      providerOptions: {
+        apiKey: env("SENDGRID_API_KEY"),
+      },
+      settings: {
+        defaultFrom: "roicoroy@mercadoamigao.com",
+        defaultReplyTo: "roicoroy@mercadoamigao.com",
+        testAddress: "roicoroy@mercadoamigao.com",
+      },
+    },
+  },
   email: {
     config: {
       provider: "nodemailer",
