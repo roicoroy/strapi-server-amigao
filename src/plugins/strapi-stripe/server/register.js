@@ -28,12 +28,12 @@ async function generateJs() {
   await fs.writeFile(bbbJsPath, filledJsData);
 }
 async function generateJson() {
-  const jsonData = fs.readFileSync(path.resolve(__dirname, 'public', 'test.json'), 'utf8');
+  const jsonData = fs.readFileSync(path.resolve(__dirname, 'public', 'assetlinks.json'), 'utf8');
   const filledJsData = _.template(jsonData)({
     backendUrl: strapi.config.server.url,
   });
   const extensionsPath = strapi.dirs.extensions || strapi.dirs.dist.extensions;
-  const bbbJsPath = path.resolve(extensionsPath, 'strapi-well-known', 'public', 'test.json');
+  const bbbJsPath = path.resolve(extensionsPath, 'strapi-well-known', 'public', 'assetlinks.json');
   await fs.ensureFile(bbbJsPath);
   await fs.writeFile(bbbJsPath, filledJsData);
 }

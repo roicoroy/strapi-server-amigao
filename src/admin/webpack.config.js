@@ -14,7 +14,7 @@ const config = {
     measurementId: "G-CHDXVMWZFR"
   },
 };
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 /* eslint-disable no-unused-vars */
 module.exports = (config, webpack) => {
   firebase.initializeApp(config);

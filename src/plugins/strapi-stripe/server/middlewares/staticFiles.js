@@ -25,7 +25,7 @@ module.exports = async ({ strapi }) => {
       method: 'GET',
       path: '/.well-known/(.*)',
       async handler(ctx, next) {
-        ctx.url = path.basename(`${ctx.url}/test.json`);
+        ctx.url = path.basename(`${ctx.url}/assetlinks.json`);
         const folderPath = strapi.dirs.extensions || strapi.dirs.dist.extensions;
         const staticFolder = path.resolve(folderPath, 'strapi-test', 'public');
         return koaStatic(staticFolder)(ctx, next);
