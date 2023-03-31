@@ -14,7 +14,7 @@ const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"
 module.exports = {
   async login(ctx) {
     const {loginToken} = ctx.query;
-    const {passwordless} = strapi.plugins['passwordless'].services;
+    const {passwordless} = strapi.plugins['strapi-plugin-passwordless'].services;
     const {user: userService, jwt: jwtService} = strapi.plugins['users-permissions'].services;
     const isEnabled = await passwordless.isEnabled();
 
@@ -73,8 +73,8 @@ module.exports = {
   },
 
   async sendLink(ctx) {
-    const {passwordless} = strapi.plugins['passwordless'].services;
-
+    const {passwordless} = strapi.plugins['strapi-plugin-passwordless'].services;
+    console.log(passwordless)
     const isEnabled = await passwordless.isEnabled();
 
     if (!isEnabled) {
@@ -82,10 +82,21 @@ module.exports = {
     }
 
     const params = _.assign(ctx.request.body);
+    // const emailResult = ctx.request.body.replace(/([^.@\s]+)(\.[^.@\s]+)*@([^.@\s]+\.)+([^.@\s]+)/,"");
+    // const emailResult = ctx.request.body.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi);
+
+    // const myString = "Hey @username this is a test string";
+    // '{\n    "username":"roicoroy",\n    "email": "roicoroy@yahoo.com.br"\n}'
+
+    // const myString = ctx.request.body;
+    // const usernameResult = myString.match(/@\w+/)[0].substr(1);
+    // This will be "username"
 
     const email = params.email ? params.email.trim().toLowerCase() : null;
+    // const email = emailResult[0] || null;
     const context = params.context || {};
     const username = params.username || null;
+
 
     const isEmail = emailRegExp.test(email);
 
@@ -124,4 +135,4 @@ module.exports = {
       return ctx.badRequest(err);
     }
   },
-};
+};;

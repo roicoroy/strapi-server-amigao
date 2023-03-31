@@ -31,7 +31,8 @@ export default {
             defaultMessage: 'Settings',
           },
           id: 'passwordless-settings',
-          to: `/settings/${pluginId}`,
+          // to: `/settings/${pluginId}`,
+          to: `/settings/strapi-plugin-passwordless`,
           Component: async () => {
             return await import(
               /* webpackChunkName: "password-settings-page" */ './pages/Settings'

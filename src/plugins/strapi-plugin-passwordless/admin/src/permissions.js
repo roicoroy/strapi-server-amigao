@@ -1,12 +1,12 @@
 const pluginPermissions = {
   main: [
-    {action: 'plugin::passwordless.main', subject: null}
+    {action: 'plugin::strapi-plugin-passwordless.main', subject: null}
   ],
   readSettings: [
-    {action: 'plugin::passwordless.settings.read', subject: null},
+    {action: 'plugin::strapi-plugin-passwordless.settings.read', subject: null},
   ],
   updateSettings: [
-    {action: 'plugin::passwordless.settings.update', subject: null},
+    {action: 'plugin::strapi-plugin-passwordless.settings.update', subject: null},
   ],
 
 };

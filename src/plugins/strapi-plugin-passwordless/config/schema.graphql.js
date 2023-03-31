@@ -54,10 +54,10 @@ module.exports = {
     Mutation: {
       sendLoginLink: {
         description: 'Send link for login to email',
-        resolverOf: 'plugins::passwordless.auth.sendLink',
+        resolverOf: 'plugins::strapi-plugin-passwordless.auth.sendLink',
         resolver: async (obj, options, { context }) => {
           context.request.body = _.toPlainObject(options);
-          await strapi.plugins['passwordless'].controllers.auth.sendLink(context);
+          await strapi.plugins['strapi-plugin-passwordless'].controllers.auth.sendLink(context);
           let output = context.body.toJSON ? context.body.toJSON() : context.body;
 
           checkBadRequest(output);
@@ -65,11 +65,11 @@ module.exports = {
         },
       },
       loginPasswordless: {
-        resolverOf: 'plugins::passwordless.auth.login',
+        resolverOf: 'plugins::strapi-plugin-passwordless.auth.login',
         resolver: async (obj, options, { context }) => {
           context.request.query.loginToken = options.loginToken;
 
-          await strapi.plugins['passwordless'].controllers.auth.login(context);
+          await strapi.plugins['strapi-plugin-passwordless'].controllers.auth.login(context);
           let output = context.body.toJSON ? context.body.toJSON() : context.body;
 
           checkBadRequest(output);

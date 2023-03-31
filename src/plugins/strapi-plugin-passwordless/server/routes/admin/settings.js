@@ -14,7 +14,7 @@ module.exports = [
         {
           name: 'admin::hasPermissions',
           config: {
-            actions: ['plugin::passwordless.settings.read'],
+            actions: ['plugin::strapi-plugin-passwordless.settings.read'],
           },
         },
       ],
@@ -29,7 +29,7 @@ module.exports = [
         {
           name: 'admin::hasPermissions',
           config: {
-            actions: ['plugin::passwordless.settings.update'],
+            actions: ['plugin::strapi-plugin-passwordless.settings.update'],
           },
         },
       ],

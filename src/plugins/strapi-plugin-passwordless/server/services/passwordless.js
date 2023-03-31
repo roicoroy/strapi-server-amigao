@@ -25,7 +25,7 @@ module.exports = (
       const pluginStore = strapi.store({
         environment: '',
         type: 'plugin',
-        name: 'passwordless',
+        name: 'strapi-plugin-passwordless',
       });
       return pluginStore.get({key: 'settings'});
     },
@@ -122,18 +122,18 @@ module.exports = (
     async createToken(email, context) {
       const settings = await this.settings();
       const {token_length = 20} = settings;
-      await strapi.query('plugin::passwordless.token').update({where: {email}, data: {is_active: false}});
+      await strapi.query('plugin::strapi-plugin-passwordless.token').update({where: {email}, data: {is_active: false}});
       const body = nanoid(token_length);
       const tokenInfo = {
         email,
         body,
         context: JSON.stringify(context)
       };
-      return strapi.query('plugin::passwordless.token').create({data: tokenInfo});
+      return strapi.query('plugin::strapi-plugin-passwordless.token').create({data: tokenInfo});
     },
 
     updateTokenOnLogin(token) {
-      const tokensService = strapi.query('plugin::passwordless.token');
+      const tokensService = strapi.query('plugin::strapi-plugin-passwordless.token');
       return tokensService.update({where: {id: token.id}, data: {is_active: false, login_date: new Date()}});
     },
 
@@ -145,14 +145,14 @@ module.exports = (
     },
 
     async deactivateToken(token) {
-      const tokensService = strapi.query('plugin::passwordless.token');
+      const tokensService = strapi.query('plugin::strapi-plugin-passwordless.token');
       await tokensService.update(
         {where: {id: token.id}, data: {is_active: false}}
       );
     },
 
     fetchToken(body) {
-      const tokensService = strapi.query('plugin::passwordless.token');
+      const tokensService = strapi.query('plugin::strapi-plugin-passwordless.token');
       return tokensService.findOne({where: {body}});
     },
 

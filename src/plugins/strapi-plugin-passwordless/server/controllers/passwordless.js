@@ -30,7 +30,7 @@ module.exports = {
         .store({
           environment: '',
           type: 'plugin',
-          name: 'passwordless',
+          name: 'strapi-plugin-passwordless',
           key: 'settings',
         })
         .get(),
@@ -46,7 +46,7 @@ module.exports = {
       .store({
         environment: '',
         type: 'plugin',
-        name: 'passwordless',
+        name: 'strapi-plugin-passwordless',
         key: 'settings',
       })
       .set({ value: ctx.request.body });

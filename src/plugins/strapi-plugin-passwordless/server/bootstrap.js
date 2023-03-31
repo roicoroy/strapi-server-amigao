@@ -38,7 +38,7 @@ module.exports = async (
   const pluginStore = strapi.store({
     environment: '',
     type: 'plugin',
-    name: 'passwordless',
+    name: 'strapi-plugin-passwordless',
   });
   const settings = await pluginStore.get({key: 'settings'});
 
@@ -69,5 +69,5 @@ Thanks.`,
   await strapi.admin.services.permission.actionProvider.registerMany(
     passworlessActions.actions
   );
-  // await strapi.plugin('users-permissions').service('passwordless').initialize()
+  // await strapi.plugin('strapi-plugin-passwordless').service('passwordless').initialize()
 };
