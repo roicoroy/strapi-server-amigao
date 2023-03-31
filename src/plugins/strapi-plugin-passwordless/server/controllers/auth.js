@@ -74,7 +74,6 @@ module.exports = {
 
   async sendLink(ctx) {
     const {passwordless} = strapi.plugins['strapi-plugin-passwordless'].services;
-    console.log(passwordless)
     const isEnabled = await passwordless.isEnabled();
 
     if (!isEnabled) {
@@ -126,6 +125,9 @@ module.exports = {
     try {
       const token = await passwordless.createToken(user.email, context);
       await passwordless.sendLoginLink(token);
+
+      // console.log(ctx);
+
       ctx.send({
         email,
         username,
