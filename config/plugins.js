@@ -30,6 +30,14 @@ module.exports = ({ env }) => ({
     enabled: true,
     resolve: "./src/plugins/strapi-stripe",
   },
+  'amigao': {
+    enabled: true,
+    resolve: './src/plugins/amigao'
+  },
+  'strapi-plugin-passwordless': {
+    enabled: true,
+    resolve: './src/plugins/strapi-plugin-passwordless'
+  },
   // email: {
   //   config: {
   //     provider: "nodemailer",

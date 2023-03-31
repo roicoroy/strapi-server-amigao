@@ -37,7 +37,6 @@
     "sharp": "^0.32.0",
     "sqlite3": "^5.1.6",
     "strapi-code-themes": "^1.0.2",
-    "strapi-plugin-passwordless": "^4.0.9",
     "stripe": "^10.17.0"
   },
   "devDependencies": {
