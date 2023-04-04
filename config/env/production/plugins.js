@@ -25,49 +25,49 @@ module.exports = ({ env }) => ({
     enabled: true,
     resolve: "./src/plugins/strapi-plugin-passwordless",
   },
-  // email: {
-  //   config: {
-  //     provider: "sendgrid",
-  //     providerOptions: {
-  //       apiKey: env("SENDGRID_API_KEY"),
-  //     },
-  //     settings: {
-  //       defaultFrom: "roicoroy@mercadoamigao.com",
-  //       defaultReplyTo: "roicoroy@mercadoamigao.com",
-  //       testAddress: "roicoroy@mercadoamigao.com",
-  //     },
-  //   },
-  // },
   email: {
     config: {
-      provider: 'mailgun',
+      provider: "sendgrid",
       providerOptions: {
-        key: env('MAILGUN_API_KEY'), // Required
-        domain: env('MAILGUN_DOMAIN'), // Required
-        url: env('MAILGUN_URL'), //Optional. If domain region is Europe use 'https://api.eu.mailgun.net'
+        apiKey: env("SENDGRID_API_KEY"),
       },
       settings: {
-        defaultFrom: 'roicoroy@mercadoamigao.com',
-        defaultReplyTo: 'roicoroy@mercadoamigao.com',
+        defaultFrom: "roicoroy@mercadoamigao.com",
+        defaultReplyTo: "roicoroy@mercadoamigao.com",
+        testAddress: "roicoroy@mercadoamigao.com",
       },
     },
   },
   // email: {
   //   config: {
-  //     provider: "nodemailer",
+  //     provider: 'mailgun',
   //     providerOptions: {
-  //       host: env("SMTP_HOST"),
-  //       port: env("SMTP_PORT"),
-  //       auth: {
-  //         user: env("SMTP_USERNAME"),
-  //         pass: env("SMTP_PASSWORD"),
-  //       },
+  //       key: env('MAILGUN_API_KEY'), // Required
+  //       domain: env('MAILGUN_DOMAIN'), // Required
+  //       url: env('MAILGUN_URL'), //Optional. If domain region is Europe use 'https://api.eu.mailgun.net'
   //     },
   //     settings: {
-  //       defaultFrom: "roicoroy@mercadoamigao.com",
-  //       defaultReplyTo: "roicoroy@mercadoamigao.com",
-  //       testAddress: "roicoroy@mercadoamigao.com",
+  //       defaultFrom: 'roicoroy@mercadoamigao.com',
+  //       defaultReplyTo: 'roicoroy@mercadoamigao.com',
   //     },
   //   },
   // },
+  email: {
+    config: {
+      provider: "nodemailer",
+      providerOptions: {
+        host: env("SMTP_HOST"),
+        port: env("SMTP_PORT"),
+        auth: {
+          user: env("SMTP_USERNAME"),
+          pass: env("SMTP_PASSWORD"),
+        },
+      },
+      settings: {
+        defaultFrom: "roicoroy@mercadoamigao.com",
+        defaultReplyTo: "roicoroy@mercadoamigao.com",
+        testAddress: "roicoroy@mercadoamigao.com",
+      },
+    },
+  },
 });
