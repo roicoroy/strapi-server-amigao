@@ -21,7 +21,6 @@ import { Tooltip } from '@strapi/design-system/Tooltip';
 import { TextInput } from '@strapi/design-system/TextInput';
 import { Textarea } from '@strapi/design-system/Textarea';
 
-
 const HomePage = () => {
   const match = useRouteMatch();
   const history = useHistory();

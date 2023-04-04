@@ -25,6 +25,9 @@ const ProductList = () => {
   const [isEditVisible, setEditVisible] = useState(false);
 
   const [productId, setProductId] = useState();
+
+
+
   console.log(productId);
 
   const [count, setCount] = useState();
@@ -49,6 +52,10 @@ const ProductList = () => {
       }
 
       const response = await getStripeProduct(offset, limit, sort, order);
+
+
+
+
 
       setProductData(response.data.res);
       setCount(response.data.count);

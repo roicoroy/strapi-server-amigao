@@ -1,7 +1,7 @@
 import pluginId from './pluginId';
 
 // const getRequestURL = endPoint => `/${pluginId}/${endPoint}`;
-const getRequestURL = endPoint => `/strapi-plugin-passwordless/${endPoint}`;
+const getRequestURL = endPoint => `/amigao/${endPoint}`;
 
 
 

@@ -77,7 +77,9 @@ module.exports = ({ strapi }) => ({
             entry.payload = entry.payload || {};
             return entry;
         };
+
         const { data } = params;
+
         if (Array.isArray(data)) {
             if (data.length > 0) {
                 const entries = await Promise.all(data.map(d => setupEntry(d)));

@@ -9,19 +9,6 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  email: {
-    config: {
-      provider: "sendgrid",
-      providerOptions: {
-        apiKey: env("SENDGRID_API_KEY"),
-      },
-      settings: {
-        defaultFrom: "roicoroy@mercadoamigao.com",
-        defaultReplyTo: "roicoroy@mercadoamigao.com",
-        testAddress: "roicoroy@mercadoamigao.com",
-      },
-    },
-  },
   "strapi-plugin-fcm": {
     enabled: true,
     resolve: "./src/plugins/strapi-plugin-fcm",
@@ -29,6 +16,41 @@ module.exports = ({ env }) => ({
   "strapi-stripe": {
     enabled: true,
     resolve: "./src/plugins/strapi-stripe",
+  },
+  amigao: {
+    enabled: true,
+    resolve: "./src/plugins/amigao",
+  },
+  "strapi-plugin-passwordless": {
+    enabled: true,
+    resolve: "./src/plugins/strapi-plugin-passwordless",
+  },
+  // email: {
+  //   config: {
+  //     provider: "sendgrid",
+  //     providerOptions: {
+  //       apiKey: env("SENDGRID_API_KEY"),
+  //     },
+  //     settings: {
+  //       defaultFrom: "roicoroy@mercadoamigao.com",
+  //       defaultReplyTo: "roicoroy@mercadoamigao.com",
+  //       testAddress: "roicoroy@mercadoamigao.com",
+  //     },
+  //   },
+  // },
+  email: {
+    config: {
+      provider: 'mailgun',
+      providerOptions: {
+        key: env('MAILGUN_API_KEY'), // Required
+        domain: env('MAILGUN_DOMAIN'), // Required
+        url: env('MAILGUN_URL'), //Optional. If domain region is Europe use 'https://api.eu.mailgun.net'
+      },
+      settings: {
+        defaultFrom: 'roicoroy@mercadoamigao.com',
+        defaultReplyTo: 'roicoroy@mercadoamigao.com',
+      },
+    },
   },
   // email: {
   //   config: {
@@ -42,9 +64,9 @@ module.exports = ({ env }) => ({
   //       },
   //     },
   //     settings: {
-  //       defaultFrom: "roicoroy@yahoo.com.br",
-  //       defaultReplyTo: "roicoroy@yahoo.com.br",
-  //       testAddress: "ricardo_watanabe_bento@outlook.com",
+  //       defaultFrom: "roicoroy@mercadoamigao.com",
+  //       defaultReplyTo: "roicoroy@mercadoamigao.com",
+  //       testAddress: "roicoroy@mercadoamigao.com",
   //     },
   //   },
   // },

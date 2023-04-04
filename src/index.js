@@ -29,7 +29,14 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {
+  async bootstrap(/*{ strapi }*/) {
+
+    // const emailSender = await strapi.plugins['email'].services.email.send({
+    //   to: 'sendgridtesting@gmail.com',
+    //   from: 'roicoroy@yahoo.com.br', //e.g. single sender verification in SendGrid
+    //   subject: '<<SG-11710215fdV>>',
+    // });
+
     // firebase.initializeApp(config);
   },
 };

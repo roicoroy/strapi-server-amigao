@@ -5,6 +5,6 @@ module.exports = ({ strapi }) => ({
     ctx.body = strapi
       .plugin('amigao')
       .service('myService')
-      .getWelcomeMessage();
+      .sendSendGridEmail();
   },
 });

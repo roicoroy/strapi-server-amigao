@@ -1,6 +1,11 @@
 {
   "parser": "babel-eslint",
   "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "modules": true,
+    "spread": true,
+    "restParams": true
+  },
   "env": {
     "commonjs": true,
     "es6": true,
@@ -22,6 +27,8 @@
     "linebreak-style": ["error", "unix"],
     "no-console": 0,
     "quotes": ["error", "single"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "no-unused-vars": 2,
+    "no-undef": 2
   }
 }

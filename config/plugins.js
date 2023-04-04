@@ -9,6 +9,22 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  "strapi-plugin-fcm": {
+    enabled: true,
+    resolve: "./src/plugins/strapi-plugin-fcm",
+  },
+  "strapi-stripe": {
+    enabled: true,
+    resolve: "./src/plugins/strapi-stripe",
+  },
+  amigao: {
+    enabled: true,
+    resolve: "./src/plugins/amigao",
+  },
+  "strapi-plugin-passwordless": {
+    enabled: true,
+    resolve: "./src/plugins/strapi-plugin-passwordless",
+  },
   email: {
     config: {
       provider: "sendgrid",
@@ -22,22 +38,21 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  "strapi-plugin-fcm": {
-    enabled: true,
-    resolve: "./src/plugins/strapi-plugin-fcm",
-  },
-  "strapi-stripe": {
-    enabled: true,
-    resolve: "./src/plugins/strapi-stripe",
-  },
-  'amigao': {
-    enabled: true,
-    resolve: './src/plugins/amigao'
-  },
-  'strapi-plugin-passwordless': {
-    enabled: true,
-    resolve: './src/plugins/strapi-plugin-passwordless'
-  },
+  // email: {
+  //   config: {
+  //     provider: 'mailgun',
+  //     providerOptions: {
+  //       key: env('MAILGUN_API_KEY'),
+  //       domain: env('MAILGUN_DOMAIN'),
+  //       url: env('MAILGUN_URL'),
+  //     },
+  //     settings: {
+  //       defaultFrom: 'roicoroy@mercadoamigao.com',
+  //       defaultReplyTo: 'roicoroy@mercadoamigao.com',
+  //       testAddress: "roicoroy@mercadoamigao.com",
+  //     },
+  //   },
+  // },
   // email: {
   //   config: {
   //     provider: "nodemailer",
