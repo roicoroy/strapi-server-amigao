@@ -9,7 +9,7 @@
 const _ = require("lodash");
 const crypto = require("crypto");
 const {sanitize} = require('@strapi/utils');
-const {nanoid} = require("../../node_modules/nanoid");
+const {nanoid} = require("nanoid");
 
 module.exports = (
   {
