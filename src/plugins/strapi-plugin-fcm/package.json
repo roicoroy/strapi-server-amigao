@@ -8,9 +8,6 @@
     "description": "Send FCM notifications from your Strapi app.",
     "kind": "plugin"
   },
-  "peerDependencies": {
-    "@strapi/strapi": "^4.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/itisnajim/strapi-plugin-fcm"
@@ -27,8 +24,5 @@
       "url": "https://itisnajim.com"
     }
   ],
-  "license": "MIT",
-  "dependencies": {
-    "firebase-admin": "^10.3.0"
-  }
+  "license": "MIT"
 }

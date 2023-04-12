@@ -1,4 +1,3 @@
-
 module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
@@ -12,8 +11,19 @@ module.exports = ({ env }) => ({
       ssl: env.bool("DATABASE_SSL"),
     },
     ssl: {
-      rejectUnauthorized: false
+      rejectUnauthorized: false,
     },
     debug: false,
   },
 });
+
+// const path = require('path');
+// // module.exports = ({ env }) => ({
+// //   connection: {
+// //     client: 'sqlite',
+// //     connection: {
+// //       filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+// //     },
+// //     useNullAsDefault: true,
+// //   },
+// // });

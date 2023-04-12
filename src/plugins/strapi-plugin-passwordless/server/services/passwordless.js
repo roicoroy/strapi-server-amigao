@@ -9,7 +9,7 @@
 const _ = require("lodash");
 const crypto = require("crypto");
 const {sanitize} = require('@strapi/utils');
-const {nanoid} = require("nanoid");
+const {nanoid} = require("../../node_modules/nanoid");
 
 module.exports = (
   {
@@ -107,16 +107,22 @@ module.exports = (
           settings.from_email && settings.from_name
             ? `${settings.from_name} <${settings.from_email}>`
             : undefined,
+        defaultFrom:
+          settings.from_email && settings.from_name
+            ? `${settings.from_name} <${settings.from_email}>`
+            : undefined,
         replyTo: settings.response_email,
         subject,
         text,
         html,
       }
       // Send an email to the user.
-      return await strapi
-        .plugin('email')
-        .service('email')
-        .send(sendData);
+      await strapi.plugins['email'].services.email.send(sendData)
+
+      // return await strapi
+      //   .plugin('email')
+      //   .service('email')
+      //   .send(sendData);
     },
 
     async createToken(email, context) {

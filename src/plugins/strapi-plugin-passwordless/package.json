@@ -34,21 +34,6 @@
   },
   "homepage": "https://github.com/kucherenko/strapi-plugin-passwordless",
   "license": "MIT",
-  "devDependencies": {
-    "cz-conventional-changelog": "3.3.0",
-    "jest": "^27.5.1"
-  },
-  "peerDependencies": {
-    "@strapi/strapi": "^4.x"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "scripts": {
-    "test": "jest"
-  },
   "dependencies": {
     "nanoid": "^3.3.4"
   }

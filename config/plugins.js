@@ -13,11 +13,7 @@ module.exports = ({ env }) => ({
     enabled: true,
     resolve: "./src/plugins/strapi-plugin-fcm",
   },
-  "strapi-stripe": {
-    enabled: true,
-    resolve: "./src/plugins/strapi-stripe",
-  },
-  amigao: {
+  'amigao': {
     enabled: true,
     resolve: "./src/plugins/amigao",
   },
@@ -38,37 +34,4 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // email: {
-  //   config: {
-  //     provider: 'mailgun',
-  //     providerOptions: {
-  //       key: env('MAILGUN_API_KEY'),
-  //       domain: env('MAILGUN_DOMAIN'),
-  //       url: env('MAILGUN_URL'),
-  //     },
-  //     settings: {
-  //       defaultFrom: 'roicoroy@mercadoamigao.com',
-  //       defaultReplyTo: 'roicoroy@mercadoamigao.com',
-  //       testAddress: "roicoroy@mercadoamigao.com",
-  //     },
-  //   },
-  // },
-  // email: {
-  //   config: {
-  //     provider: "nodemailer",
-  //     providerOptions: {
-  //       host: env("SMTP_HOST"),
-  //       port: env("SMTP_PORT"),
-  //       auth: {
-  //         user: env("SMTP_USERNAME"),
-  //         pass: env("SMTP_PASSWORD"),
-  //       },
-  //     },
-  //     settings: {
-  //       defaultFrom: "roicoroy@mercadoamigao.com",
-  //       defaultReplyTo: "roicoroy@mercadoamigao.com",
-  //       testAddress: "roicoroy@mercadoamigao.com",
-  //     },
-  //   },
-  // },
 });

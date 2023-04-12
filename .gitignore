@@ -114,3 +114,5 @@ exports
 build
 package-lock.json
 yarn.lock
+
+!src/plugins/strapi-plugin-passwordless/node_modules
