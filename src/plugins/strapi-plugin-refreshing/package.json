@@ -1,0 +1,38 @@
+{
+  "name": "strapi-plugin-refreshing",
+  "version": "1.1.5",
+  "description": "A Strapi plugin that adds a basic implementation of refresh tokens.",
+  "homepage": "https://github.com/codesxt/strapi-plugin-refreshing#readme",
+  "strapi": {
+    "name": "refreshing",
+    "description": "A Strapi plugin that adds a basic implementation of refresh tokens.",
+    "kind": "plugin",
+    "displayName": "Refreshing"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "Bruno Alexis Faúndez Valenzuela",
+    "email": "developers@ferativ.com",
+    "url": "https://esemismobruno.com"
+  },
+  "maintainers": [
+    {
+      "name": "Bruno Alexis Faúndez Valenzuela",
+      "email": "developers@ferativ.com",
+      "url": "https://esemismobruno.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesxt/strapi-plugin-refreshing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codesxt/strapi-plugin-refreshing/issues"
+  },
+  "keywords": [
+    "strapi",
+    "plugin",
+    "refresh-token"
+  ],
+  "license": "MIT"
+}
