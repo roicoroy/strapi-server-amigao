@@ -5,11 +5,11 @@ module.exports = ({ strapi }) => ({
   async index(ctx) {
     const id = ctx.state.user.id;
     const tokens = await strapi
-      .plugin('refreshing')
+      .plugin('strapi-plugin-refreshing')
       .service('refresh-token')
       .getFromUser(id)
     const entries = tokens
-    
+
     ctx.body = entries;
   },
 })

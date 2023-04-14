@@ -17,10 +17,10 @@ module.exports = ({ env }) => ({
     enabled: true,
     resolve: "./src/plugins/amigao",
   },
-  "strapi-plugin-passwordless": {
-    enabled: true,
-    resolve: "./src/plugins/strapi-plugin-passwordless",
-  },
+  // "strapi-plugin-passwordless": {
+  //   enabled: true,
+  //   resolve: "./src/plugins/strapi-plugin-passwordless",
+  // },
   "strapi-plugin-refreshing": {
     enabled: true,
     resolve: "./src/plugins/strapi-plugin-refreshing",
