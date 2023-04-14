@@ -24,5 +24,8 @@
       "url": "https://itisnajim.com"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@strapi/helper-plugin": "^4.9.1"
+  }
 }

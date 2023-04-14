@@ -115,4 +115,7 @@ build
 package-lock.json
 yarn.lock
 
+!src/plugins/amigao/node_modules
+!src/plugins/strapi-plugin-fcm/node_modules
 !src/plugins/strapi-plugin-passwordless/node_modules
+!src/plugins/strapi-plugin-refreshing/node_modules

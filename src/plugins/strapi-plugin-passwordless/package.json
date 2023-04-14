@@ -35,6 +35,7 @@
   "homepage": "https://github.com/kucherenko/strapi-plugin-passwordless",
   "license": "MIT",
   "dependencies": {
+    "@strapi/helper-plugin": "^4.9.1",
     "nanoid": "^3.3.4"
   }
 }

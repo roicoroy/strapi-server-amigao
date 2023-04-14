@@ -16,5 +16,8 @@
       "name": "A Strapi developer"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@strapi/helper-plugin": "^4.9.1"
+  }
 }

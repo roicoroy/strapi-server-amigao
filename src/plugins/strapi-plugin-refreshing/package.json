@@ -9,7 +9,9 @@
     "kind": "plugin",
     "displayName": "Refreshing"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@strapi/helper-plugin": "^4.9.1"
+  },
   "author": {
     "name": "Bruno Alexis Faúndez Valenzuela",
     "email": "developers@ferativ.com",
