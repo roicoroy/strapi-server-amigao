@@ -22,15 +22,15 @@ module.exports = plugin => {
         populate: [
           'first_name',
           'last_name',
-          'address_1',
-          'address_2',
-          'city',
-          // cotry code needs to be removed
-          // from strapi user, it will belong to CheckoutState
-          'region_code',
-          'country',
-          'postal_code',
-          'phone',
+          // 'address_1',
+          // 'address_2',
+          // 'city',
+          // // cotry code needs to be removed
+          // // from strapi user, it will belong to CheckoutState
+          // 'region_code',
+          // 'country',
+          // 'postal_code',
+          // 'phone',
           'device_token',
           'accepted_fcm'
         ]
@@ -46,16 +46,16 @@ module.exports = plugin => {
       { ...ctx.params, populate: [
         'first_name',
         'last_name',
-        'address_1',
-        'address_2',
-        'city',
-        'region_code',
-        'country',
-        'postal_code',
-        'phone',
+        // 'address_1',
+        // 'address_2',
+        // 'city',
+        // 'region_code',
+        // 'country',
+        // 'postal_code',
+        // 'phone',
         'device_token',
         'accepted_fcm'
-      ] 
+      ]
       }
     );
 
